@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block mainsec %}
+
+<section id="archives-section-2">
+  <div class="margin-indent-class archives-section-1">
+    <form action="." method="GET">
+      <label for="blogtitle">Search by Title</label>
+      <input type="text" name="blogtitle" value="{{ query|escape }}">
+      <input type="submit" value="Search">
+    </form>
+
+    <form class="" action="." method="GET">
+      <label for="pubdate">Search by Published Date</label>
+      <input type="date" name="pubdate" value="{{ datequery|escape }}">
+      <input type="submit" value="Search">
+    </form>
+
+    <form action="." method="GET">
+      <label for="key">Search by Keyword</label>
+      <input type="text" name="key" value="{{ keywordquery|escape }}">
+      <input type="submit" value="Search">
+    </form>
+
+    {% if query %}
+    <h2>Results for "{{ query|escape }}":</h2>
+    {% if results %}
+    <div class="grid-and-search margin-indent-class">
+      <div class="home-grid-container">
+        {% for blog in results %}
+        <form action="http://127.0.0.1:8000/blog/">
+          <input type="text" name="blogtitle" value="{{ blog.title }}">
+          <button class="grid-box">
+            {% load static %}
+            <img src="{% static blogpost.img.url %}" alt="">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.date }}</p>
+          </button>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <p>No blogs found</p>
+    {% endif %}
+    {% endif %}
+
+    {% if datequery %}
+    <h2>Results for "{{ datequery|escape }}":</h2>
+    {% if results %}
+    <div class="grid-and-search margin-indent-class">
+      <div class="home-grid-container">
+        {% for blog in results %}
+        <form action="http://127.0.0.1:8000/blog/">
+          <input type="text" name="blogtitle" value="{{ blog.title }}">
+          <button class="grid-box">
+              {% load static %}
+            <img src="{% static blogpost.img.url %}" alt="">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.date }}</p>
+          </button>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <p>No blogs found</p>
+    {% endif %}
+    {% endif %}
+
+    {% if keywordquery %}
+    <h2>Results for "{{ keywordquery|escape }}":</h2>
+    {% if results %}
+    <div class="grid-and-search margin-indent-class">
+      <div class="home-grid-container">
+        {% for blog in results %}
+        <form action="http://127.0.0.1:8000/blog/">
+          <input type="text" name="blogtitle" value="{{ blog.title }}">
+          <button class="grid-box">
+              {% load static %}
+            <img src="{% static blogpost.img.url %}" alt="">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.date }}</p>
+          </button>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <p>No blogs found</p>
+    {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

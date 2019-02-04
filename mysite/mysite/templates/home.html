@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block mainsec %}
+
+  <section id="section-1">
+    <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      alt="">
+  </section>
+
+  <section id="section-2">
+    <div class="grid-and-search margin-indent-class">
+      <div class="home-grid-container">
+        
+        {% for blogpost in blogpostlist %}
+        <form action="http://127.0.0.1:8000/blog/">
+          <input type="text" name="blogtitle" value="{{ blogpost.title }}">
+          <button class="grid-box">
+              {% load static %}
+            <img src="{% static imglist.forloop.counter0 %}" alt="">
+            <h2>{{ blogpost.title }}</h2>
+            <p>{{ blogpost.date }}</p>
+          </button>
+        </form>
+        {% endfor %}
+
+      </div>
+
+      <div class="right">
+        <h2>Search by keyword</h2>
+        {% for keyw in keywordlist %}
+        <form action="http://127.0.0.1:8000/archives/?key={{keyw.keyword}}">
+          <input type="text" name="key" value="{{ keyw.keyword }}">
+          <input type="submit" value="{{ keyw.keyword }}">
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="margin-indent-class-grid-container">
+      <div class="btn">
+        <a href="http://127.0.0.1:8000/">Load more</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

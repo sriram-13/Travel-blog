@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0;">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js"></script>
+  <title>Sriram's Travel Blog</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <div class="margin-indent-class">
+        <div class="navflexcontainer">
+          <a href="http://127.0.0.1:8000/">Sriram's travel blog</a>
+          <div class="menu-flex">
+            <a href="http://127.0.0.1:8000/about/">About</a>
+            <a href="http://127.0.0.1:8000/archives/">Archives</a>
+            <a href="http://127.0.0.1:8000/contact/">Contact</a>
+          </div>
+            <a href="#" id="menu-button"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    {% block mainsec %}
+    {% endblock %}
+
+    <footer>
+      <div class="foot margin-indent-class">
+        <p> Copyright &copy; 2019 Sriram's Travel Blog </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mainsec %}
+
+  <section id="">
+    <div class="main-blog-content margin-indent-class blog-grid-container">
+      <h1>{{ blogpost.title }}</h1>
+      <h3>Keywords:</h3>
+      <div class="key">
+        {% for x in keywords %}
+        <a href="http://127.0.0.1:8000/archives/?key={{ x.1 }}">{{ x.1 }}</a>
+        {% endfor %}
+      </div>
+      <p id="date">Date Published: {{ blogpost.date }} </p>
+      <img src="{% static imgblog %}" alt="">
+      <p class="blog-p">{{ blogpost.content }}</p>
+    </div>
+  </section>
+
+  <section id="blog-section-2">
+    <div class="margin-indent-class main-blog-content">
+      <h3> Most recent blogs</h3>
+      <div class="most-viewed-blogs-grid-container">
+        {% for blogpost in mostrecentblogs %}
+        <form action="http://127.0.0.1:8000/blog/">
+          <input type="text" name="blogtitle" value="{{ blogpost.title }}">
+          <button class="most-viewed-blogs-grid-box">
+            <img src="{% static blogpost.img.url %}" alt="">
+            <h2>{{ blogpost.title }}</h2>
+            <p>{{ blogpost.date }}</p>
+          </button>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

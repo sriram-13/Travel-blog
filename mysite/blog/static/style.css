@@ -1,0 +1,567 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.home-grid-container input[type=text] {
+  display: none;
+}
+
+.right input[type=text] {
+  display: none;
+}
+
+.right input[type=submit] {
+  background-color: white;
+  color: black;
+  border: 1px solid tomato;
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.right input[type=submit]:hover {
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+
+nav {
+  background-color: tomato;
+}
+
+.navflexcontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.navflexcontainer a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: Harrington;
+}
+
+.home-grid-container a {
+  text-decoration: none;
+  color: black;
+}
+
+#date {
+  font-style: italic;
+}
+
+.key a {
+  text-decoration: none;
+  border: 1px solid tomato;
+  background-color: white;
+  color: tomato;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.key a:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.most-viewed-blogs-grid-container input[type=text] {
+  display: none;
+}
+
+.most-viewed-blogs-grid-box {
+  border: 5px solid tomato;
+  background-color: white;
+  }
+
+.grid-box:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.margin-indent-class-grid-container {
+  padding-bottom: 60px;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  background-color: darkgrey;
+  color: white;
+}
+
+#blog-section-2 {
+  padding-bottom: 60px;
+}
+
+.archives-section-1 label {
+  font-weight: bold;
+}
+
+@media (min-width:800px) {
+
+/*------------------------------------------Start of CSS for home.html-------------------------------------*/
+
+.margin-indent-class {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.margin-indent-class-grid-container {
+  margin-left: 10%;
+  margin-right: 30%;
+  padding-bottom: 60px;
+}
+
+.navflexcontainer a {
+  font-size: 25px;
+}
+
+.navflexcontainer a:hover {
+  background-color: red;
+}
+
+#menu-button {
+  display: none;
+}
+
+.menu-flex {
+  padding: 20px;
+  justify-content: flex-end;
+}
+
+#section-1 img{
+  width: 100%;
+  height: 600px;
+}
+
+.grid-and-search {
+  display: grid;
+  grid-template-areas: 'area1 area1 area2';
+  /*border: 1px solid green;*/
+  grid-gap: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.home-grid-container {
+  grid-area: area1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(400px, auto);
+  border: 1px solid tomato;
+  background-color: tomato;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.grid-box {
+  text-align: center;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.grid-box img {
+  width: 100%;
+  height: auto;
+}
+
+.grid-box h2, p {
+  padding: 10px;
+}
+
+.right {
+  grid-area: area2;
+  /*border: 1px solid blue;*/
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+
+.right h2 {
+  font-family: Harrington;
+}
+
+
+/*
+.load {
+  display: grid;
+  grid-template-columns: area3;
+}
+
+.btn {
+  grid-area: area3;
+}
+*/
+
+.btn a {
+  display: inline-block;
+  background-color: white;
+  color: tomato;
+  border: 1px solid tomato;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 25px;
+  font-size: 20px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 50;      
+  margin-right: 70;
+}
+
+.btn a:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/*--------------------------------------End of CSS for home.html----------------------------------------*/
+
+/*--------------------------------------Start of CSS for blog.html---------------------------------------*/
+
+.main-blog-content {
+  border: 1px solid darkgrey;
+  margin-top: 5%;
+  margin-bottom:5%;
+}
+
+.blog-grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.blog-grid-container > img {
+  width: 100%;
+  /*height: 300px;*/
+  height: minmax(300px,auto);
+}
+
+.main-blog-content h1,h3 {
+  text-align: left;
+  /*padding-left: 10%;
+  padding-right: 10%;*/
+}
+
+.main-blog-content h3 {
+  font-weight: lighter;
+}
+
+.key {
+  text-align: left;
+  /*padding-left: 10%;
+  padding-right: 10%;*/
+}
+
+#date {
+  text-align: left;
+  /*padding-left: 10%;
+  padding-right: 10%;*/
+}
+
+.blog-p {
+  text-align: justify;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /*padding-left: 10%;
+  padding-right: 10%;*/
+  font-size: 15px;
+  font-family: Arial;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+#blog-section-2 h3 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.most-viewed-blogs-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(400px, auto);
+  border: 1px solid blue;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-gap: 2%;
+}
+
+.most-viewed-blogs-grid-box:hover {
+  cursor: pointer;
+}
+
+.most-viewed-blogs-grid-box img {
+  width: 100%;
+  height: auto;
+}
+
+.most-viewed-blogs-grid-box h2, p {
+  padding: 10px;
+}
+
+}
+
+/*-------------------------------End of CSS for blog.html--------------------------------------*/
+
+/*--------------------------------Start of CSS for archives.html--------------------------------*/
+
+.archives-section-1 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.archives-section-1 input, label {
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.archives-section-1 label {
+  font-size: 1em;
+  text-align: left;
+}
+
+.archives-section-1 input[type=text] {
+  width: 25%;
+}
+
+.archives-section-1 input[type=submit] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  color: tomato;
+  border: 1px solid tomato;
+  border-radius: 25px;
+}
+
+.archives-section-1 input[type=submit]:hover {
+  background-color: tomato;
+  color: white;
+}
+
+#archives-section-2 {
+  padding-bottom: 60px;
+}
+
+/*------------------------------------------------End of CSS for archives.html-----------------------------*/
+
+
+/* -----------------------------------------------Start of CSS for contact.html-------------------------------- */
+
+.contact-grid-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  /* height: 100%; */
+  /* border: 3px solid tomato; */
+  font-size: calc(0.75em + 1vmin);
+  padding-bottom: 60px;
+}
+
+#contact-image {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#contact-image img {
+  flex: 100%;
+}
+
+#contact-info {
+  padding: 10px;
+  margin-top: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50%;
+  font-family: Arial;
+  text-align: left;
+}
+
+#contact-info h2 {
+  font-style: bold;
+  color: tomato;
+}
+
+#tag {
+  font-weight: bold;
+}
+
+/* -------------------------------------------- End of CSS for contact.html---------------------------------*/
+
+@media (min-width:801px) and (max-width:900px){
+  .margin-indent-class{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width:800px) {
+
+  /*.navflexcontainer a:hover {
+    background-color: red;
+  }*/
+
+  footer p {
+    text-align: center;
+  }
+
+  .menu-flex {
+    display: none;
+  }
+
+  #section-1 img{
+    width: 100%;
+    height: 300px;
+  }
+
+  .home-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-gap: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    /*border: 1px solid black*/
+  }
+
+  .grid-box {
+    border: 5px solid tomato;
+    background-color: white;
+  }
+
+  .grid-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-box p, h2 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: white;
+    margin: 40px;
+    margin-bottom: 60px;
+  }
+
+  .btn a {
+    text-decoration: none;
+    color: tomato;
+    border: 1px solid tomato;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    font-size: 20px;
+  }
+
+  .btn a:hover {
+    background-color: tomato;
+    color: white;
+  }
+
+  /*-------------------CSS for blog.html----------*/
+
+.main-blog-content {
+  margin-bottom: 40px;
+}
+
+.most-viewed-blogs-grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  /*border: 1px solid blue;*/
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  }
+
+.most-viewed-blogs-grid-box img {
+  width: 100%;
+  height: auto;
+}
+
+.most-viewed-blogs-grid-box p {
+  text-align: center;
+}
+
+.main-blog-content h1,h3,p {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.blog-p {
+  text-align: justify;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  font-family: Arial;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 20px;
+  border: 1px solid tomato;
+}
+
+.key {
+  text-align: left;
+  padding: 20px;
+}
+
+.main-blog-content h3 {
+  font-weight: lighter;
+  font-family: Harrington;
+}
+
+#blog-section-2 h3 {
+  font-weight: bold;
+  text-align: center;
+  font-family: Harrington;
+}
+
+.main-blog-content img {
+  width: 100%;
+  height: auto;
+}
+
+.archives-section-1 label, input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.archives-section-1 p {
+  text-align: center;
+}
+
+}
