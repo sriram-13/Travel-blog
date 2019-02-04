@@ -386,7 +386,6 @@ footer {
 }
 
 #contact-info {
-  padding: 10px;
   margin-top: 50%;
   margin-left: 10%;
   margin-right: 10%;
@@ -562,6 +561,25 @@ footer {
 
 .archives-section-1 p {
   text-align: center;
+}
+
+.contact-grid-container {
+  grid-template-columns: 1fr;
+  margin: 0%;
+}
+
+#contact-image {
+  width: 100%;
+  height: 50vh;
+}
+
+#contact-image img {
+  width: inherit;
+  height: inherit;
+}
+
+#contact-info {
+  margin: 5% 10%;
 }
 
 }
